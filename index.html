@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>DevJobs</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="header__logo"
+        src="./assets/desktop/logo.svg"
+        alt="devjob company logo"
+      />
+      <div class="header__theme-switcher-box">
+        <img src="./assets/desktop/icon-sun.svg" alt="" class="light" />
+        <!-- TOGGLE -->
+        <div class="toggle">
+          <input
+            type="checkbox"
+            class="toggle__checkbox"
+            id="toggle__checkbox"
+          />
+          <label class="toggle__label" for="toggle__checkbox">
+            <div class="toggle__ball"></div>
+          </label>
+        </div>
+
+        <img src="./assets/desktop/icon-moon.svg" alt="" class="dark" />
+      </div>
+      <div class="header__form-container">
+        <form action="#" class="header__form">
+          <input class="header__form-input" type="text" />
+          <input class="header__form-input" type="text" />
+          <input name="full-time" class="header__form-input" type="checkbox" />
+          <label class="header__form-label" for="full-time"
+            >Full Time Only</label
+          >
+          <button class="header__form-btn" type="submit">Search</button>
+        </form>
+      </div>
+    </header>
+    <main class="content">JOBS</main>
+  </body>
+</html>
