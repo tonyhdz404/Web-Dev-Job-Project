@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./src/index.js"></script>
     <link rel="stylesheet" href="./css/main.css" />
     <title>DevJobs</title>
   </head>
@@ -32,16 +33,73 @@
       </div>
       <div class="header__form-container">
         <form action="#" class="header__form">
-          <input class="header__form-input" type="text" />
-          <input class="header__form-input" type="text" />
-          <input name="full-time" class="header__form-input" type="checkbox" />
-          <label class="header__form-label" for="full-time"
-            >Full Time Only</label
-          >
-          <button class="header__form-btn" type="submit">Search</button>
+          <div class="header__form__box box-1">
+            <img
+              id="search"
+              src="./assets/desktop/icon-search.svg"
+              alt=""
+              class="header__form-icon"
+            />
+            <input
+              class="header__form-input"
+              type="text"
+              placeholder="Filter by title, companies, expertise…"
+            />
+          </div>
+
+          <div class="header__form__box box-2">
+            <img
+              id="location"
+              src="./assets/desktop/icon-location.svg"
+              alt=""
+              class="header__form-icon"
+            />
+            <input
+              class="header__form-input"
+              type="text"
+              placeholder="Filter by location…"
+            />
+          </div>
+
+          <div class="header__form__box box-3">
+            <input
+              name="full-time"
+              id="full-time"
+              class="header__form-input"
+              type="checkbox"
+            />
+            <label for="full-time" class="fancy-checkbox"></label>
+            <label class="header__form-label" for="full-time"
+              >Full Time Only</label
+            >
+
+            <button class="header__form-btn" type="submit">Search</button>
+          </div>
         </form>
       </div>
     </header>
-    <main class="content">JOBS</main>
+    <main class="content">
+      <div class="job-grid">
+        <div class="job-grid__card">
+          <figure class="job-grid__card-logo">
+            <img class="" src="./assets/logos/scoot.svg" alt="" />
+          </figure>
+
+          <div class="job-grid__card-content">
+            <span class="job-grid__card-posted">5h ago . </span>
+            <span class="job-grid__card-type">Fulltime </span>
+            <h2 class="job-grid__card-title">Senior Software Engineer</h2>
+            <span class="job-grid__card-company">Scoot</span>
+            <span class="job-grid__card-location">United Kingdom</span>
+          </div>
+        </div>
+        <div class="job-grid__card"></div>
+        <div class="job-grid__card"></div>
+        <div class="job-grid__card"></div>
+        <div class="job-grid__card"></div>
+        <div class="job-grid__card"></div>
+        <div class="job-grid__card"></div>
+      </div>
+    </main>
   </body>
 </html>

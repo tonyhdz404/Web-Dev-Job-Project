@@ -29,6 +29,7 @@ html {
 }
 
 body {
+  font-family: "Kumbh Sans", sans-serif;
   background-color: #f2f2f2;
   width: 100%;
   min-height: 100vh;
@@ -39,7 +40,6 @@ body {
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: aquamarine;
   position: relative;
   background-image: url("../assets/desktop/bg-pattern-header.svg");
   background-size: 100% 16rem;
@@ -77,10 +77,124 @@ body {
 .header__form-container {
   position: absolute;
   background-color: var(--white);
-  width: 135rem;
+  width: 1110px;
   height: 8rem;
   top: 120px;
-  left: 165px;
+  left: 277px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.header__form {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 463px 300px 345px;
+      grid-template-columns: 463px 300px 345px;
+}
+
+.header__form__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.header__form-icon {
+  margin-right: 16px;
+}
+
+.header__form-input {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  color: #19202d;
+}
+
+.header__form-input:focus {
+  outline: none;
+}
+
+.header__form-label {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.header__form-label:hover ~ .fancy-checkbox {
+  background-color: var(--light-violet);
+}
+
+.header__form-btn {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  width: 12.3rem;
+  height: 4.8rem;
+  color: white;
+  border: none;
+  padding: 1.6rem 3.55rem 1.6rem 3.55rem;
+  border-radius: 5px;
+  background-color: #5964e0;
+  cursor: pointer;
+}
+
+.header__form-btn:hover {
+  background-color: #939bf4;
+}
+
+::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--grey);
+}
+
+:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--grey);
+}
+
+::-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--grey);
+}
+
+::placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--grey);
+}
+
+#search {
+  margin-left: 3.2rem;
+}
+
+#location {
+  margin-left: 2.3rem;
 }
 
 .toggle {
@@ -118,5 +232,146 @@ body {
 
 .toggle__checkbox:checked ~ .toggle__label .toggle__ball {
   right: 3px;
+}
+
+.box-2 {
+  border-right: 1px solid var(--light-grey);
+  border-left: 1px solid #979797;
+}
+
+.box-3 {
+  padding-left: 32px;
+  padding-right: 16px;
+}
+
+#full-time {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+#full-time:checked ~ .fancy-checkbox {
+  background-color: #5964e0;
+  background-image: url("../assets/desktop/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fancy-checkbox {
+  background-color: #979797;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 3px;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+  cursor: pointer;
+}
+
+.fancy-checkbox:hover {
+  background-color: var(--light-violet);
+}
+
+.content {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.job-grid {
+  margin-top: 10rem;
+  width: 1110px;
+  height: 1132px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (235px)[4];
+      grid-template-rows: repeat(4, 235px);
+  gap: 30px 40px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.job-grid__card {
+  background-color: white;
+  height: 22.8rem;
+  border-radius: 6px;
+  padding: 4.9rem 3.2rem 3.2rem 3.2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.job-grid__card:hover .job-grid__card-title {
+  color: #6e8098;
+}
+
+.job-grid__card-logo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: -20px;
+}
+
+.job-grid__card-content {
+  height: 100%;
+}
+
+.job-grid__card-posted {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #6e8098;
+}
+
+.job-grid__card-type {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #6e8098;
+}
+
+.job-grid__card-title {
+  margin-top: 16px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #19202d;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.job-grid__card-company {
+  margin-top: 16px;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #6e8098;
+  display: block;
+}
+
+.job-grid__card-location {
+  display: inline-block;
+  margin-top: 4.4rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #5964e0;
 }
 /*# sourceMappingURL=main.css.map */
